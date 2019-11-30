@@ -1,0 +1,79 @@
+body {
+    background-color: $color-main;
+    position: relative;
+    font-family: 'Montserat', sans-serif;
+}
+
+h2 {
+    font-family: 'Montserat', sans-serif;
+    display: block;
+    position: relative;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 15px;
+        height: 10px;
+        bottom: 5px;
+        background: url(../img/arrow2.png) no-repeat center;
+    }
+}
+
+h3 {
+    font-family: 'Montserat', sans-serif;
+}
+
+h4 {
+    font-family: 'Montserat', sans-serif;
+}
+
+h5 {
+    font-family: 'Montserat', sans-serif;
+}
+
+p {
+    font-family: 'Montserat', sans-serif;
+}
+
+a {
+    font-family: 'Montserat', sans-serif;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+label {}
+
+button {}
+
+.long-btn {
+    position: relative;
+    display: block;
+    width: 315px;
+    color: white;
+    text-align: center;
+    background-color: $color-main;
+    border-radius: 10px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 0;
+    transition: .3s;
+    &:after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: url(../img/arrow.png) no-repeat center;
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+    }
+    &:hover {
+        color: white;
+        opacity: 0.8;
+    }
+}

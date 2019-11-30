@@ -1,0 +1,29 @@
+$root-font-size: 16px;
+@function rem($size) {
+    @return $size / $root-font-size * 1rem;
+}
+
+@import "include/fonts.scss";
+@import "bootstrap/bootstrap.scss";
+@import "now-ui-kit.scss";
+@import "include/variables.scss";
+@import "include/base.scss";
+@import "include/mixins.scss";
+@import "include/custom.scss";
+@import "include/modal.scss";
+html {
+    font-size: $root-font-size;
+    line-height: rem(27px);
+}
+
+@-webkit-keyframes animate-stripes {
+    100% {
+        background-position: -100px 0px;
+    }
+}
+
+@keyframes animate-stripes {
+    100% {
+        background-position: -100px 0px;
+    }
+}
