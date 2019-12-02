@@ -13,6 +13,12 @@
     }
 }
 
+.icon-Burger {
+    button {
+        opacity: 0;
+    }
+}
+
 .header-menu {
     padding-bottom: 10px;
 }
@@ -248,5 +254,310 @@
             display: block;
             font-size: 16px;
         }
+    }
+}
+
+.advantages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    background-color: $white;
+    border-radius: 20px;
+    &__img {
+        width: 100%;
+    }
+    &__vektor {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        max-width: 500px;
+        width: 70%;
+        height: 100%;
+        background: url(../img/adBG.svg) no-repeat right bottom;
+        background-size: contain;
+        opacity: 0.75;
+    }
+    &__items {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        &--title {
+            max-width: 200px;
+            font-size: 17px;
+        }
+    }
+}
+
+.service {
+    background-color: $white;
+    border-radius: 20px;
+    padding: 15px 0;
+    margin-bottom: 3px;
+    &__title {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-bottom: 3px;
+        font-size: 16px;
+        color: $color-blue;
+        background-color: $color-liteblue;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 15px;
+            bottom: 10px;
+            width: 15px;
+            height: 10px;
+            background: url(../img/arrowB.png) no-repeat center;
+        }
+        &--active {
+            background-color: $color-main;
+            color: white;
+            &:after {
+                background: url(../img/arrowT.png) no-repeat center;
+            }
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 16px;
+        margin-bottom: 15px;
+        color: $color-blue;
+        &:hover {
+            color: $color-blue;
+            opacity: 0.7;
+        }
+    }
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 21px 0;
+    margin-bottom: 3px;
+    &__title {
+        align-self: flex-start;
+        &:after {
+            left: 220px;
+        }
+    }
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+    &__img-wrap {
+        position: relative;
+    }
+    &__items {
+        position: absolute;
+        width: 90px;
+        height: 51px;
+        bottom: 0;
+        left: 0;
+        background: url(../img/VektorRed.svg) no-repeat bottom left;
+        span {
+            display: block;
+            position: absolute;
+            bottom: 5px;
+            left: 15px;
+            color: white;
+            font-weight: 600;
+            font-size: 20px;
+        }
+    }
+    &__text {
+        margin-bottom: 15px;
+    }
+    &__cost {
+        margin-bottom: 0;
+        font-weight: 600;
+        span {
+            font-weight: 400;
+            text-decoration: line-through;
+        }
+    }
+}
+
+.footer {
+    background-color: $white;
+    border-radius: 20px;
+    padding: 15px 0;
+    &__title {
+        display: block;
+        margin: 0;
+        margin-bottom: 30px;
+        padding-left: 15px;
+        font-size: 16px;
+        color: $color-blue;
+    }
+    &__socials {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.contact {
+    position: relative;
+    padding: 30px 25px 35px 25px;
+    &__link {
+        display: block;
+        color: white;
+        font-size: 20px;
+        margin-bottom: 15px;
+        &:last-child {
+            font-weight: 600;
+        }
+    }
+    &__text {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: white;
+    }
+}
+
+.phone {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    &__window {
+        padding-left: 15px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 330px;
+        min-width: 380px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        background: url(../img/vektorBlue.svg) no-repeat left bottom;
+        z-index: 999;
+        transform: translateX(-380px);
+        transition: ease-in-out 0.3s;
+        &--active {
+            transform: translateX(0px);
+        }
+    }
+    &__item {
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: white;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        img {
+            margin-right: 10px;
+        }
+        span {
+            display: inline-block;
+            width: 200px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.btntop {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    z-index: 9999;
+}
+
+.modal {
+    &-content {
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-title {
+        font-size: 20px;
+    }
+    &-form {
+        input[type="text"] {
+            width: 100%;
+            border-color: $color-main;
+            border-radius: 10px;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+    }
+    &-btn {
+        width: 100%;
+        margin: 0;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        background-color: $color-main;
+        color: white;
+        line-height: 36px;
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    &-box {
+        input {
+            margin-right: 10px;
+        }
+        label {
+            font-size: 12px;
+            line-height: 12px;
+            vertical-align: middle;
+            margin-bottom: 0;
+        }
+    }
+    &-pass {
+        font-size: 12px;
+        line-height: 12px;
+        vertical-align: middle;
+        margin-bottom: 0;
+        margin-left: auto;
+        color: $color-blue;
+        &:hover {
+            color: $color-blue;
+        }
+    }
+    &-enter-title {
+        text-align: center;
+        font-size: 18px;
+    }
+    &-fb {
+        text-align: center;
+        opacity: .3;
+        margin-bottom: 38px;
+    }
+    &-reg {
+        width: 100%;
+        background-color: $color-main;
+        color: white;
+        border-radius: 10px;
+        padding: 5px 0;
+        margin-bottom: 15px;
+    }
+    &-p {
+        text-align: center;
+        font-size: 10px;
     }
 }

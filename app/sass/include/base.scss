@@ -23,6 +23,7 @@ h2 {
 }
 
 h3 {
+    font-size: 16px;
     font-family: 'Montserat', sans-serif;
 }
 
@@ -47,7 +48,21 @@ a {
 
 label {}
 
-button {}
+button {
+    border: none;
+    &:focus {
+        border: none;
+        outline: none;
+    }
+    &:active {
+        border: none;
+        outline: none;
+    }
+    &:hover {
+        border: none;
+        outline: none;
+    }
+}
 
 .long-btn {
     position: relative;
