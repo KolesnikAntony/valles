@@ -4,7 +4,9 @@ body {
     font-family: 'Montserat', sans-serif;
 }
 
-h2 {
+h2 {}
+
+.arrow-link {
     font-family: 'Montserat', sans-serif;
     display: block;
     position: relative;
@@ -27,9 +29,11 @@ h3 {
 }
 
 a {
+    color: inherit;
     font-family: 'Montserat', sans-serif;
     &:hover {
         text-decoration: none;
+        color: inherit;
     }
 }
 

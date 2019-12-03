@@ -13,7 +13,7 @@
     }
 }
 
-.icon-Burger {
+.icon-person {
     button {
         opacity: 0;
     }
@@ -33,6 +33,10 @@
     padding-bottom: 30px;
     background-color: $white;
     border-radius: 20px;
+    &__link-wrap {
+        color: black;
+        display: block;
+    }
     &__img {
         width: 100%;
     }
@@ -126,8 +130,10 @@
         text-align: center;
     }
     &__title {
-        &:after {
-            left: 225px;
+        &-link {
+            &:after {
+                left: 225px;
+            }
         }
     }
     &__img {
@@ -150,17 +156,15 @@
     margin-bottom: 3px;
     &__title {
         align-self: flex-start;
-        &:after {
-            left: 75px;
+        &-link {
+            &:after {
+                left: 75px;
+            }
         }
     }
     .swiper-slide {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
         height: auto;
+        display: flex;
     }
     &__img-wrap {
         position: relative;
@@ -172,6 +176,13 @@
         bottom: 0;
         left: 0;
         background: url(../img/VektorRed.svg) no-repeat bottom left;
+        &-link {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
         span {
             display: block;
             position: absolute;
@@ -233,6 +244,9 @@
     padding-bottom: 30px;
     background-color: $white;
     border-radius: 20px;
+    &__slide-link {
+        display: block;
+    }
     &__vektor {
         position: absolute;
         left: 0;
@@ -267,6 +281,9 @@
     padding-bottom: 30px;
     background-color: $white;
     border-radius: 20px;
+    &__slide-link {
+        display: block;
+    }
     &__img {
         width: 100%;
     }
@@ -328,6 +345,9 @@
             }
         }
     }
+    &__items {
+        margin-top: 15px;
+    }
     &__item {
         display: flex;
         flex-direction: column;
@@ -353,16 +373,22 @@
     margin-bottom: 3px;
     &__title {
         align-self: flex-start;
-        &:after {
-            left: 220px;
+        &-link {
+            &:after {
+                left: 220px;
+            }
         }
     }
-    .swiper-slide {
+    &__slide-link {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         text-align: center;
+        height: auto;
+    }
+    .swiper-slide {
+        display: flex;
         height: auto;
     }
     &__img-wrap {
