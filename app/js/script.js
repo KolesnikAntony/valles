@@ -125,9 +125,15 @@ phone.onclick = function() {
 
 document.addEventListener('click', function(event) {
     var isClickInside = phone.contains(event.target) || event.target === table;
-    console.log(isClickInside);
+    var isClickInside2 = burger.contains(event.target) || event.target === ppp;
+
+    console.log(isClickInside2);
 
     if (!isClickInside) {
         table.classList.remove('phone__window--active');
+    }
+    if (!isClickInside2) {
+        ppp.classList.remove('popup-active');
+        burger.classList.remove('icon-B-active');
     }
 });
