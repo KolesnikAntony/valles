@@ -517,6 +517,20 @@
         font-size: 16px;
         color: white;
     }
+    &__link {
+        &:hover {
+            text-decoration: none;
+            color: white;
+        }
+        &:active {
+            text-decoration: none;
+            color: white;
+        }
+        &:visited {
+            text-decoration: none;
+            color: white;
+        }
+    }
 }
 
 .phone {

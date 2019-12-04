@@ -125,7 +125,7 @@ phone.onclick = function() {
 
 document.addEventListener('click', function(event) {
     var isClickInside = phone.contains(event.target) || event.target === table;
-    var isClickInside2 = burger.contains(event.target) || event.target === ppp;
+    var isClickInside2 = burger.contains(event.target) || event.target === ppp || ppp.contains(event.target);
 
     console.log(isClickInside2);
 
