@@ -2,6 +2,32 @@ $().ready(function() {
     $('.service__title').on('click', (ev) => {
         $(ev.currentTarget).toggleClass('service__title--active');
     });
+
+    $('.popup__title').on('click', (ev) => {
+        $(ev.currentTarget).toggleClass('popup__title--active');
+    });
+
+    $('.icon-B').on('click', (ev) => {
+        $('.popup').toggleClass('popup-active');
+        $('.icon-B').toggleClass('icon-B-active');
+
+    });
+
+    $(window).on('scroll', function() {
+        $('.phone').addClass('phone-active');
+    })
+
+    var timer = null;
+
+    $(window).on('scroll', function() {
+        clearTimeout(timer);
+
+        timer = setTimeout(function() {
+            $('.phone').removeClass('phone-active');
+        }, 1000);
+    });
+
+
 });
 var swiper1 = new Swiper('.s1', { // Optional parameters
     direction: 'horizontal',
@@ -51,9 +77,13 @@ var swiper6 = new Swiper('.s6', {
 
 window.onscroll = function() {
     var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrolled >= 80)
+    if (scrolled >= 80) {
         document.querySelector(".topdesk").style.display = 'none';
+        //document.querySelector(".phone").style.display = 'none';
+    }
+
 }
+
 
 
 let scrolled;
@@ -81,10 +111,17 @@ function scrollTop() {
 
 let phone = document.querySelector('.phone');
 let table = document.querySelector('.phone__window');
+let ppp = document.querySelector('.popup');
+let burger = document.querySelector('.icon-B')
+
+burger.onclick = function() {
+    document.querySelector(".topdesk").style.display = 'none';
+}
 
 phone.onclick = function() {
     table.classList.add('phone__window--active');
 }
+
 
 document.addEventListener('click', function(event) {
     var isClickInside = phone.contains(event.target) || event.target === table;

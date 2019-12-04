@@ -23,6 +23,58 @@
     padding-bottom: 10px;
 }
 
+.icon-B {
+    width: 24px;
+    height: 18px;
+    display: block;
+    position: relative;
+    span {
+        position: absolute;
+        right: 0;
+        display: block;
+        height: 2px;
+        background-color: white;
+        transition: ease-in-out 0.3s;
+    }
+    span:first-child {
+        top: 0;
+        width: 100%;
+    }
+    span:nth-child(2) {
+        width: 75%;
+        top: 50%;
+        transform: translateY(-1px);
+    }
+    span:last-child {
+        bottom: 0;
+        width: 50%;
+    }
+    &-active {
+        width: 18px;
+        height: 18px;
+        span {
+            display: block;
+            height: 2px;
+            background-color: white;
+            transition: ease-in-out 0.3s;
+        }
+        span:first-child {
+            width: 100%;
+            top: 50%;
+            transform: translateY(-1px) rotate(45deg);
+        }
+        span:nth-child(2) {
+            opacity: 0;
+            width: 75%;
+        }
+        span:last-child {
+            width: 100%;
+            bottom: 50%;
+            transform: translateY(1px) rotate(-45deg);
+        }
+    }
+}
+
 .offer {
     display: flex;
     flex-direction: column;
@@ -131,6 +183,7 @@
     }
     &__title {
         &-link {
+            margin-bottom: 0;
             &:after {
                 left: 225px;
             }
@@ -324,6 +377,7 @@
         padding-top: 5px;
         padding-bottom: 5px;
         margin-bottom: 3px;
+        text-align: left;
         font-size: 16px;
         color: $color-blue;
         background-color: $color-liteblue;
@@ -341,6 +395,7 @@
             background-color: $color-main;
             color: white;
             &:after {
+                transform: rotate(180deg);
                 background: url(../img/arrowT.png) no-repeat center;
             }
         }
@@ -467,6 +522,11 @@
     bottom: 0;
     left: 0;
     z-index: 99;
+    transition: 0.3s;
+    transform: translateY(0);
+    &-active {
+        transform: translateY(60px);
+    }
     &__window {
         padding-left: 15px;
         position: fixed;
@@ -585,5 +645,106 @@
     &-p {
         text-align: center;
         font-size: 10px;
+    }
+}
+
+.popup {
+    position: absolute;
+    top: 43px;
+    left: 0;
+    padding: 15px 30px;
+    margin-bottom: 3px;
+    background-color: $color-main;
+    z-index: 999;
+    width: 80%;
+    transform: translateX(-100%);
+    transition: ease-in-out 0.3s;
+    &-active {
+        transform: translateX(0);
+    }
+    &__head-title {
+        font-size: 20px;
+        color: white;
+        margin-bottom: 35px;
+    }
+    &__title {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-bottom: 3px;
+        text-align: left;
+        font-size: 16px;
+        color: white;
+        background-color: $color-blue;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 15px;
+            bottom: 10px;
+            width: 15px;
+            height: 10px;
+            background: url(../img/arrowBW.svg) no-repeat center;
+            transition: 0.3s;
+        }
+        &--active {
+            &:after {
+                transform: rotate(180deg);
+                transition: 0.3s;
+            }
+        }
+    }
+    &__link {
+        display: inline-block;
+        color: white;
+        margin-bottom: 25px;
+        transition: 0.3s;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            bottom: 6px;
+            display: block;
+            width: 15px;
+            height: 10px;
+            background: url(../img/arrowRW.svg) no-repeat center;
+        }
+        &[data-toggle] {
+            &:after {
+                width: 10px;
+                right: -16px;
+                background: url(../img/arrowBW.svg) no-repeat center;
+            }
+        }
+        &:hover {
+            color: white;
+        }
+        img {
+            margin-right: 10px;
+        }
+    }
+    &__items {
+        margin-top: 15px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 16px;
+        margin-bottom: 15px;
+        color: white;
+        &:hover {
+            color: white;
+        }
+    }
+    &__select {
+        margin-bottom: 35px;
+    }
+    &__2lvl {
+        padding-left: 35px;
+        a {
+            font-size: 15px;
+        }
     }
 }
