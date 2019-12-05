@@ -659,6 +659,15 @@
             margin-bottom: 15px;
             font-size: 14px;
             color: white;
+            &:hover {
+                color: white;
+            }
+            &:active {
+                color: white;
+            }
+            &:visited {
+                color: white;
+            }
             &:last-child {
                 margin-bottom: 0;
             }
