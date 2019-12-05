@@ -147,7 +147,8 @@
 
 .swiper-container {
     width: 100%;
-    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 
 .swiper-container-horizontal>.swiper-pagination-bullets {
