@@ -210,9 +210,18 @@
         }
         &__title {
             &-link {
+                &:hover {
+                    color: black;
+                }
+                &:active {
+                    color: black;
+                }
+                &:visited {
+                    color: black;
+                }
                 margin-bottom: 0;
                 &:after {
-                    left: 225px;
+                    left: 250px;
                 }
             }
         }
@@ -497,6 +506,15 @@
         &__title {
             align-self: flex-start;
             &-link {
+                &:hover {
+                    color: black;
+                }
+                &:active {
+                    color: black;
+                }
+                &:visited {
+                    color: black;
+                }
                 &:after {
                     left: 220px;
                 }
