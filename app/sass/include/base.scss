@@ -32,6 +32,15 @@ h3 {
 a {
     color: inherit;
     font-family: 'Montserat', sans-serif;
+    &:hover {
+        text-decoration: none;
+    }
+    &:active {
+        text-decoration: none;
+    }
+    &:visited {
+        text-decoration: none;
+    }
 }
 
 button {
