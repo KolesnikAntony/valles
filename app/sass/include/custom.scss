@@ -244,6 +244,7 @@
         padding: 21px 0;
         margin-bottom: 3px;
         &__title {
+            margin-bottom: 0;
             align-self: flex-start;
             &-link {
                 &:hover {
@@ -365,6 +366,24 @@
         padding-bottom: 30px;
         background-color: $white;
         border-radius: 20px;
+        &__title {
+            margin-bottom: 0;
+            align-self: flex-start;
+            &-link {
+                &:hover {
+                    color: black;
+                }
+                &:active {
+                    color: black;
+                }
+                &:visited {
+                    color: black;
+                }
+                &:after {
+                    left: 190px;
+                }
+            }
+        }
         &__slide-link {
             display: block;
             &:hover {
@@ -411,6 +430,24 @@
         padding-bottom: 30px;
         background-color: $white;
         border-radius: 20px;
+        &__title {
+            margin-bottom: 0;
+            align-self: flex-start;
+            &-link {
+                &:hover {
+                    color: black;
+                }
+                &:active {
+                    color: black;
+                }
+                &:visited {
+                    color: black;
+                }
+                &:after {
+                    left: 230px;
+                }
+            }
+        }
         &__slide-link {
             display: block;
             &:hover {
@@ -487,8 +524,8 @@
             }
         }
         &__items {
-            padding-left: 13px;
-            margin-top: 28px;
+            padding-left: 28px;
+            margin-top: 13px;
         }
         &__item {
             display: flex;
@@ -514,6 +551,7 @@
         padding: 21px 0;
         margin-bottom: 3px;
         &__title {
+            margin-bottom: 0;
             align-self: flex-start;
             &-link {
                 &:hover {
