@@ -58,7 +58,7 @@ var swiper2 = new Swiper('.s2', { // Optional parameters
 var swiper3 = new Swiper('.s3', {
     direction: 'horizontal',
     loop: true,
-    width: 250,
+    width: 220,
 })
 var swiper4 = new Swiper('.s4', {
     direction: 'horizontal',
