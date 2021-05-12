@@ -38,7 +38,7 @@
     "pretty-print-json": "0.0.6",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^7.29.0",
-    "swiper": "^4.5.0",
+    "swiper": "^6.5.1",
     "system": "^2.0.1",
     "t-aria-progressbar": "^1.0.5"
   }
